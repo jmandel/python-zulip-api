@@ -71,6 +71,10 @@ app = Flask(__name__)
 def handle_root():
     return json.dumps("")
 
+@app.route('/healthz')
+def handle_root():
+    return json.dumps("")
+
 @app.route('/bots/<bot>', methods=['POST'])
 def handle_bot(bot):
     # type: (str) -> Union[str, BadRequest]
