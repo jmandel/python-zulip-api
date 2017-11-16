@@ -72,7 +72,7 @@ def handle_root():
     return json.dumps("")
 
 @app.route('/healthz')
-def handle_root():
+def handle_healthz():
     return json.dumps("")
 
 @app.route('/bots/<bot>', methods=['POST'])
